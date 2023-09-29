@@ -26,25 +26,28 @@ Test-Fire API Automation Framework is a powerful and flexible testing framework 
 1. Clone the repository:
 
    git clone https://github.com/bagalumaji/test-fire-api-automation-framework.git
+   
 
-## Build the Project
+### Build the Project
 
 Navigate to the project directory and run the following command to download dependencies:
 
-- mvn clean install
+   mvn clean install
+   
 
-## Configure Tests
+### Configure Tests
 
-Configure your API endpoints, test data, and other settings in the configuration files (if any).
+   Configure your API endpoints, test data, and other settings in the configuration files (if any).
 
-## Run Tests
+### Run Tests
 
    Execute tests using Maven:
    mvn test
 
-## View Reports
 
-After the test execution, you can find Extent Report HTML reports in the **target/reports** directory.
+### View Reports
+
+   After the test execution, you can find Extent Report HTML reports in the **target/reports** directory.
 
 
 
