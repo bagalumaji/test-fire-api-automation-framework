@@ -9,8 +9,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
-public final class CurrentEnvironmentDataUtils {
-    private CurrentEnvironmentDataUtils() {
+public final class EnvironmentDataUtils {
+    private EnvironmentDataUtils() {
     }
 
     private static final Map<String, String> MAP;
