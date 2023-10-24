@@ -4,7 +4,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.bagal.constants.FrameworkConstants;
-import com.bagal.utils.CurrentEnvironmentDataUtils;
+import com.bagal.utils.EnvironmentDataUtils;
 
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ExtentReport {
             extentSparkReporter.config().setTheme(Theme.DARK);
             extentSparkReporter.config().setEncoding("uft-8");
             extentReports.attachReporter(extentSparkReporter);
-            extentReports.setSystemInfo("Environment", CurrentEnvironmentDataUtils.getCurrentEnvironment());
+            extentReports.setSystemInfo("Environment", EnvironmentDataUtils.getCurrentEnvironment());
             extentReports.setSystemInfo("Automation Engineer","Umaji Bagal");
         }
     }
