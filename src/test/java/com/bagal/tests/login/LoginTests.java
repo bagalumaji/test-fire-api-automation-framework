@@ -1,8 +1,7 @@
 package com.bagal.tests.login;
 
 import com.bagal.api.LoginApi;
-import com.bagal.constants.FrameworkConstants;
-import com.bagal.utils.CurrentEnvironmentDataUtils;
+import com.bagal.utils.EnvironmentDataUtils;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,8 +15,8 @@ public class LoginTests {
     public void verifyUserIsAbleToLoginTest() {
         // arrange
         Map<String, String> login = new HashMap<>();
-        login.put("username",CurrentEnvironmentDataUtils.getUserName());
-        login.put("password",CurrentEnvironmentDataUtils.getPassword());
+        login.put("username", EnvironmentDataUtils.getUserName());
+        login.put("password", EnvironmentDataUtils.getPassword());
 
         //act
         Response response = LoginApi.LoginUser(login);
@@ -27,7 +26,7 @@ public class LoginTests {
     }
 
     //@Test(description = "verify user is able to login for valid credentials")
-    public void verifyUserloggedInTest() {
+    public void verifyUserLoggedInTest() {
         // arrange
         Map<String, String> headers = new HashMap<>();
         headers.put("authorization", "YW5OdGFYUm86WkdWdGJ6RXlNelE9Oj8tPyo/");
