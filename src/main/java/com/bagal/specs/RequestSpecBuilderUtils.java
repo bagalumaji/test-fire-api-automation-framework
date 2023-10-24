@@ -1,7 +1,7 @@
 package com.bagal.specs;
 
 import com.bagal.report.ExtentReportLogger;
-import com.bagal.utils.CurrentEnvironmentDataUtils;
+import com.bagal.utils.EnvironmentDataUtils;
 import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.given;
@@ -13,7 +13,7 @@ public final class RequestSpecBuilderUtils {
 
     public static RequestSpecification getRequestSpecification(Object payload) {
         RequestSpecification requestSpecification = given()
-                .baseUri(CurrentEnvironmentDataUtils.getBaseUri())
+                .baseUri(EnvironmentDataUtils.getBaseUri())
                 .contentType(JSON)
                 .body(payload)
                 .log()
@@ -24,7 +24,7 @@ public final class RequestSpecBuilderUtils {
 
     public static RequestSpecification getRequestSpecification() {
         RequestSpecification requestSpecification = given()
-                .baseUri(CurrentEnvironmentDataUtils.getBaseUri())
+                .baseUri(EnvironmentDataUtils.getBaseUri())
                 .log()
                 .ifValidationFails();
         ExtentReportLogger.logRequestInfo(requestSpecification);
