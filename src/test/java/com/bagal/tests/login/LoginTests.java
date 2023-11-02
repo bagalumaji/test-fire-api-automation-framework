@@ -1,6 +1,7 @@
 package com.bagal.tests.login;
 
 import com.bagal.api.LoginApi;
+import com.bagal.models.request.LoginRequestPojo;
 import com.bagal.utils.EnvironmentDataUtils;
 import io.restassured.response.Response;
 import org.testng.Assert;
